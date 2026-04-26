@@ -1,5 +1,5 @@
 import { Outlet } from 'react-router-dom';
-import { Box, Container, Paper, Typography } from '@mui/material';
+import { Box, Container, Paper, Stack, Typography } from '@mui/material';
 
 export function PublicLayout() {
   return (
@@ -7,6 +7,12 @@ export function PublicLayout() {
       <Container maxWidth="lg">
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1.1fr 0.9fr' }, gap: 4, alignItems: 'center' }}>
           <Box>
+            <Stack direction="row" spacing={1.5} alignItems="center" sx={{ mb: 3 }}>
+              <Box component="img" src="/logo.svg" alt="" sx={{ width: 54, height: 54, objectFit: 'contain' }} />
+              <Typography variant="h5" sx={{ fontWeight: 800, letterSpacing: 0 }}>
+                ProHelper
+              </Typography>
+            </Stack>
             <Typography variant="overline" sx={{ color: 'primary.main', letterSpacing: 1.6 }}>
               ProHelper Brigades
             </Typography>

@@ -22,13 +22,16 @@ export function CabinetLayout() {
     <Box sx={{ minHeight: '100vh', backgroundColor: 'background.default' }}>
       <AppBar position="sticky" color="inherit" elevation={0} sx={{ borderBottom: '1px solid rgba(15, 118, 110, 0.12)' }}>
         <Toolbar sx={{ justifyContent: 'space-between', gap: 2 }}>
-          <Box>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+            <Box component="img" src="/logo.svg" alt="" sx={{ width: 44, height: 44, objectFit: 'contain' }} />
+            <Box>
             <Typography variant="h6" sx={{ fontWeight: 700 }}>
               ProHelper Brigades
             </Typography>
             <Typography variant="body2" color="text.secondary">
               Кабинет бригады
             </Typography>
+            </Box>
           </Box>
           <Stack direction="row" spacing={1.5} alignItems="center">
             <Chip label={getBrigadeStatusLabel('profile', user?.verification_status ?? 'draft')} color="primary" variant="outlined" />
